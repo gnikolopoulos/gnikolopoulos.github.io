@@ -13,8 +13,7 @@ map:
 
 
 <div class="contact-box">
-	<form netlify action="{{ site.baseurl }}/contact-success/" method="post" class="contact-form">
-		<input type="hidden" name="_to" value="support@example.com" />
+	<form netlify action="{{ site.baseurl }}/contact-success/" netlify-honeypot="_gotcha" data-netlify-recaptcha="true" method="post" class="contact-form">
 		<input type="text" name="_gotcha" style="display: none;">
 
 		<label for="name">Full Name</label>
@@ -27,6 +26,8 @@ map:
 		<textarea name="message" id="message" placeholder="Enter your message..."></textarea>
 
 		<input type="submit" value="Send Message" />
+
+		<div data-netlify-recaptcha="true"></div>
 	</form>
 
 	<div class="contact-details">
