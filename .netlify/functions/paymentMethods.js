@@ -3,6 +3,7 @@ exports.handler = async function(event, context, callback) {
     const request = JSON.parse(event.body)
 
     // Validate that the request is coming from Snipcart
+    /*
     const response = await fetch(`https://payment.snipcart.com/api/public/custom-payment-gateway/validate?publicToken=${request.PublicToken}`)
 
     // Return a 404 if the request is not from Snipcart
@@ -10,12 +11,13 @@ exports.handler = async function(event, context, callback) {
         statusCode: 404,
         body: ""
     }
+    */
 
     // Create a payment method list
     let paymentMethodList = [{
         id: 'vivawallet',
         name: 'VivaWallet',
-        //iconUrl: 'https://developer.vivawallet.com/images/new-payment-methods-logos/vivawallet.svg',
+        iconUrl: 'https://developer.vivawallet.com/images/new-payment-methods-logos/vivawallet.svg?width=50px',
         checkoutUrl: 'google.com',
     }]
 
