@@ -8,7 +8,7 @@ exports.handler = async function(event, context, callback) {
 
     // Return successful status code and available payment methods
     return {
-        statusCode: 200,
+        statusCode: 302,
         headers: {
           "Location": "https://www.interactive-design.gr",
         },
