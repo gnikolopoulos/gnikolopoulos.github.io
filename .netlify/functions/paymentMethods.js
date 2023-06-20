@@ -3,7 +3,7 @@ exports.handler = async function(event, context, callback) {
     const request = JSON.parse(event.body)
     return {
         statusCode: 200,
-        body: JSON.stringify(request),
+        body: JSON.stringify({ message: 'Hello world!' }),
     }
 
     // Validate that the request is coming from Snipcart
