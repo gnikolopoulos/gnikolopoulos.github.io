@@ -15,7 +15,7 @@ exports.handler = async function(event, context, callback) {
     let paymentMethodList = [{
         id: 'vivawallet',
         name: 'VivaWallet',
-        iconUrl: 'https://developer.vivawallet.com/images/new-payment-methods-logos/vivawallet.svg?width=50px',
+        iconUrl: 'https://developer.vivawallet.com/images/new-payment-methods-logos/vivawallet.svg',
         checkoutUrl: 'google.com',
     }]
 
