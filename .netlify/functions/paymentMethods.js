@@ -1,8 +1,9 @@
 exports.handler = async function(event, context, callback) {
     if (event.httpMethod !== 'POST') {
-    return {
-        statusCode: 501,
-        body: JSON.stringify({ message: "Not Implemented" }),
+        return {
+            statusCode: 501,
+            body: JSON.stringify({ message: "Not Implemented" }),
+        }
     }
 
     // Get request's body
