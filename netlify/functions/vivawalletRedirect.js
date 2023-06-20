@@ -40,6 +40,7 @@ exports.handler = async function(event, context, callback) {
         merchantTrns: paymentSession.id,
     }
     
+    // Call the VivaWallet API to create a payment order
     const vivawallet_response = await fetch(`${api_urls[process.env.VIVAWALLET_MODE]}/v2/orders`, {
         method: "POST",
         body: JSON.stringify(payload),
@@ -57,6 +58,7 @@ exports.handler = async function(event, context, callback) {
         }
     }
 
+    // Redirect the user to the payment screen
     return {
         statusCode: 302,
         headers: {
